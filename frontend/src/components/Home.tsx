@@ -19,6 +19,23 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-[#0d0d0d] px-4 text-gray-100">
+
+      {/* 🔥 Product Hunt Badge (TOP) */}
+      <div className="mb-6">
+        <a
+          href="https://www.producthunt.com/products/nexachat?utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-nexachat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1058969&theme=light"
+            alt="NexaChat - Real-time rooms. Instant conversations | Product Hunt"
+            width="250"
+            height="54"
+          />
+        </a>
+      </div>
+
       {/* Main Card */}
       <div className="bg-[#1a1a1a] p-10 rounded-2xl shadow-lg text-center w-full max-w-md border border-gray-800">
         
@@ -40,17 +57,15 @@ const Home = () => {
 
         {/* Input Field */}
         <div className="space-y-5">
-          <div className="relative">
-            <input
-              className="w-full px-5 py-3 bg-[#121212] border border-gray-700 rounded-xl
-                         text-gray-200 placeholder-gray-500 text-base
-                         focus:ring-2 focus:ring-pink-500 focus:border-pink-500
-                         outline-none transition-all"
-              placeholder="Enter Room ID"
-              value={room}
-              onChange={(e) => setRoom(e.target.value)}
-            />
-          </div>
+          <input
+            className="w-full px-5 py-3 bg-[#121212] border border-gray-700 rounded-xl
+                       text-gray-200 placeholder-gray-500 text-base
+                       focus:ring-2 focus:ring-pink-500 focus:border-pink-500
+                       outline-none transition-all"
+            placeholder="Enter Room ID"
+            value={room}
+            onChange={(e) => setRoom(e.target.value)}
+          />
 
           {/* Join Button */}
           <button
